@@ -4,3 +4,12 @@
 @import "jekyll-theme-prologue";
 
 @import "custom";
+
+.cover-photo {
+    max-width: 100%;
+    height: auto;
+    width: 50%; /* Adjust the width percentage as needed */
+    margin: auto;
+    display: block;
+  }
+  
