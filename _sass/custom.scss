@@ -4,6 +4,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
+.auto-header {
+    text-decoration: none;
+
+}
 
 .page-title {
     font-weight: bold;
@@ -12,7 +16,7 @@
 .cover-photo {
     max-width: 100%;
     height: auto;
-    width: 50%; /* Adjust the width percentage as needed */
+    width: 40%; /* Adjust the width percentage as needed */
     margin: auto;
     display: block;
   }
