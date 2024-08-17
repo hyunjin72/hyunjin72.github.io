@@ -5,7 +5,7 @@ layout: base
 <main class="container-md">
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
-    <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 200px;">
+    <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 80px;">
       <h1 class="section-title" style="background-color: transparent;">{{ section.title }}</h1>
       {{ section.content }}
     </section>
