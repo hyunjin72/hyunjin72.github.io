@@ -6,7 +6,7 @@ layout: default
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
-      <h1 class="section-title" style="background-color: transparent;" style="text-align: left;">{{ section.title }}</h1>
+      <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em;">{{ section.title }}</h1>
       {{ section.content }}
     </section>
   {% endfor %}
