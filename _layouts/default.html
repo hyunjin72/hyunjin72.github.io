@@ -1,16 +1,6 @@
 ---
 layout: base
 ---
-<!-- <!DOCTYPE HTML>
-<html>
-	{%- include head.html -%}
-	<body>
-		{{- content -}}
-		{%- include footer.html -%}
-	</body>
-</html> -->
-
-<!-- <div class="intro-header"></div>
 
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   {% if page.before-content %}
@@ -30,13 +20,4 @@ layout: base
       {% endfor %}
     </div>
   {% endif %}
-</main> -->
-
-
-<main class="container-md">
-  {% for section in site.sections %}
-    <section id="{{ section.title | downcase | replace: ' ', '-' }}">
-      {{ section.content }}
-    </section>
-  {% endfor %}
 </main>
