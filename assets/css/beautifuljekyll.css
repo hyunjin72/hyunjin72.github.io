@@ -223,6 +223,10 @@ img {
   color: var(--navbar-text-col);
 }
 
+.navbar-custom .nav-link.active {
+  color: var(--hover-col); 
+}
+
 .navbar-toggler {
   font-size: 1rem;
   margin: 0.5rem 0;
