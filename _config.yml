@@ -98,9 +98,9 @@ rss-description: This website is a virtual proof that I'm awesome
 share-links-active:
   # twitter: false
   # facebook: false
-  linkedin: true
-  google-scholar: true
-  github: true
+  linkedin: false
+  google-scholar: false
+  github: false
   # vk: false
 
 # How to display the link to your website in the footer
