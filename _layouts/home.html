@@ -6,7 +6,7 @@ layout: default
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
-      {% if section.title == "About Me" %}
+      {% if section.title == "Hyunjin Seo" %}
         <!-- Different layout for 'About Me' section -->
         <div style="text-align: left;">
           <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em;">
@@ -19,7 +19,7 @@ layout: default
       {% else %}
         <!-- Parallel layout for other sections -->
         <div style="display: flex; align-items: flex-start;">
-          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; flex-basis: 20%; margin-right: 40px;">
+          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 1.5em; flex-basis: 20%; margin-right: 40px;">
             {{ section.title }}
           </h1>
           <div style="flex-basis: 80%;">
