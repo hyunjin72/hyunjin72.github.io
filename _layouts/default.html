@@ -3,10 +3,17 @@ layout: base
 scrolly_nav: _sections
 ---
 
-<!-- <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
- -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#about-me">ABOUT ME</a></li>
+    <li><a href="#news">NEWS</a></li>
+    <li><a href="#publications">PUBLICATIONS</a></li>
+    <li><a href="#education">EDUCATION</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#awards">AWARDS</a></li>
+  </ul>
+</nav>
 
 <main class="container-md">
   {% assign sorted_sections = site.sections | sort: 'order' %}

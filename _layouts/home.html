@@ -3,6 +3,18 @@ layout: default
 scrolly_nav: _sections
 ---
 
+<nav class="navbar">
+  <ul>
+    <li><a href="#about-me">ABOUT ME</a></li>
+    <li><a href="#news">NEWS</a></li>
+    <li><a href="#publications">PUBLICATIONS</a></li>
+    <li><a href="#education">EDUCATION</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#awards">AWARDS</a></li>
+  </ul>
+</nav>
+
 <main class="container-md">
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
