@@ -2,22 +2,12 @@
 layout: base
 ---
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  {% if page.before-content %}
-    <div class="before-content">
-      {% for file in page.before-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {{ content }}
-
-  {% if page.after-content %}
-    <div class="after-content">
-      {% for file in page.after-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
+<main class="container-md">
+  {% assign sorted_sections = site.sections | sort: 'order' %}
+  {% for section in sorted_sections %}
+    <section id="{{ section.title | downcase | replace: ' ', '-' }}">
+      <h1 class="section-title" style="background-color: transparent;">{{ section.title }}</h1>
+      {{ section.content }}
+    </section>
+  {% endfor %}
 </main>
