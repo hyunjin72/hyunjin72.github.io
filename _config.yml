@@ -19,13 +19,13 @@ author: Hyunjin Seo
 # --- List of links in the navigation bar --- #
 ###############################################
 
-navbar-links:
-  About Me: "about-me"
-  News: "news"
-  Publications: "publications"
-  Education: "education"
-  Experience: "experience"
-  Projects and Awards: "projects-awards"
+# navbar-links:
+#   About Me: "about-me"
+#   News: "news"
+#   Publications: "publications"
+#   Education: "education"
+#   Experience: "experience"
+#   Projects and Awards: "projects-awards"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
