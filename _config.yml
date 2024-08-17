@@ -19,24 +19,21 @@ author: Hyunjin Seo
 # --- List of links in the navigation bar --- #
 ###############################################
 
-# navbar-links:
-#   About Me: "about-me"
-#   News: "news"
-#   Publications: "publications"
-#   Education: "education"
-#   Experience: "experience"
-#   Projects and Awards: "projects-awards"
-  # Resources:
-  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
-  #   - Learn markdown: "https://www.markdowntutorial.com/"
-  # LINK:
-    #- Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    #- Learn markdown: "http://www.markdowntutorial.com/"
-    #- GitHub Pages: "https://pages.github.com/"
-    #- Author's home: "http://deanattali.com"
-    # - HOME: "https://hyunjin72.github.io"
-    # - REPOSITORY: "https://github.com/hyunjin72"
-  # Author's home: "https://deanattali.com"
+navbar-links:
+  - title: "ABOUT ME"
+    url: "/#about-me"
+  - title: "NEWS"
+    url: "/#news"
+  - title: "PUBLICATIONS"
+    url: "/#publications"
+  - title: "EDUCATION"
+    url: "/#education"
+  - title: "EXPERIENCE"
+    url: "/#experience"
+  - title: "PROJECTS"
+    url: "/#projects"
+  - title: "AWARDS"
+    url: "/#awards"
 
 ################
 # --- Logo --- #
@@ -44,7 +41,7 @@ author: Hyunjin Seo
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-# avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/my_image_busan.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
