@@ -1,6 +1,14 @@
----
+<!-- ---
 layout: base
----
+--- -->
+<!DOCTYPE HTML>
+<html>
+	{%- include head.html -%}
+	<body>
+		{{- content -}}
+		{%- include footer.html -%}
+	</body>
+</html>
 
 <!-- <div class="intro-header"></div>
 
@@ -24,11 +32,11 @@ layout: base
   {% endif %}
 </main> -->
 
-
+<!-- 
 <main class="container-md">
   {% for section in site.sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}">
       {{ section.content }}
     </section>
   {% endfor %}
-</main>
+</main> -->
