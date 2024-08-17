@@ -15,6 +15,7 @@ let BeautifulJekyllJS = {
         } else {
             $(".navbar").removeClass("top-nav-short");
         }
+        BeautifulJekyllJS.updateActiveNavLink();
     });
 
     // On mobile, hide the avatar when expanding the navbar menu
@@ -134,6 +135,19 @@ let BeautifulJekyllJS = {
         $("body").removeClass("overflow-hidden");
       }
     });
+  },
+  
+  updateActiveNavLink : function() {
+    const sections = $("section");
+    const navLinks = $(".navbar-custom .nav-link");
+    let currentIndex = sections.length;
+
+    while (--currentIndex && $(window).scrollTop() + 50 < $(sections[currentIndex]).offset().top) {}
+
+    navLinks.removeClass("active");
+    if (navLinks[currentIndex]) {
+      $(navLinks[currentIndex]).addClass("active");
+    }
   }
 };
 
