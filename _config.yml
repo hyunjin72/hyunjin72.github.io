@@ -20,20 +20,13 @@ author: Hyunjin Seo
 ###############################################
 
 navbar-links:
-  - title: "ABOUT ME"
-    url: "/#about-me"
-  - title: "NEWS"
-    url: "/#news"
-  - title: "PUBLICATIONS"
-    url: "/#publications"
-  - title: "EDUCATION"
-    url: "/#education"
-  - title: "EXPERIENCE"
-    url: "/#experience"
-  - title: "PROJECTS"
-    url: "/#projects"
-  - title: "AWARDS"
-    url: "/#awards"
+  - ["About Me", "/#about-me"]
+  - ["News", "/#news"]
+  - ["Publications", "/#publications"]
+  - ["Education", "/#education"]
+  - ["Experience", "/#experience"]
+  - ["Projects", "/#projects"]
+  - ["Awards", "/#awards"]
 
 ################
 # --- Logo --- #
