@@ -7,14 +7,23 @@ scrolly_nav: _sections
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
-      <div style="text-align: left;">
-        <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; font-weight: normal;">
-          {{ section.title }}
-        </h1>
-        <div>
-          {{ section.content }}
+      {% if section.title == "About Me" %}
+        <!-- Different layout for 'About Me' section -->
+        <div style="text-align: left;">
+          <div>
+            {{ section.content }}
+          </div>
         </div>
-      </div>
+      {% else %}
+        <div style="text-align: left;">
+          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; font-weight: normal;">
+            {{ section.title }}
+          </h1>
+          <div>
+            {{ section.content }}
+          </div>
+        </div>
+      {% endif %}
     </section>
   {% endfor %}
 </main>
