@@ -6,15 +6,27 @@ layout: default
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
-      <div style="display: flex; align-items: flex-start;">
-        <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; flex-basis: 20%; margin-right: 40px;">
-          {{ section.title }}
-        </h1>
-        <div style="flex-basis: 80%;">
-          {{ section.content }}
+      {% if section.title == "About Me" %}
+        <!-- Different layout for 'About Me' section -->
+        <div style="text-align: left;">
+          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em;">
+            {{ section.title }}
+          </h1>
+          <div>
+            {{ section.content }}
+          </div>
         </div>
-      </div>
+      {% else %}
+        <!-- Parallel layout for other sections -->
+        <div style="display: flex; align-items: flex-start;">
+          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; flex-basis: 20%; margin-right: 40px;">
+            {{ section.title }}
+          </h1>
+          <div style="flex-basis: 80%;">
+            {{ section.content }}
+          </div>
+        </div>
+      {% endif %}
     </section>
   {% endfor %}
 </main>
-
