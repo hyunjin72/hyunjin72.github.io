@@ -223,7 +223,7 @@ img {
   color: var(--navbar-text-col);
 }
 
-.navbar-custom .nav-link.active {
+.navbar-custom .navbar-nav .nav-link.active {
   color: var(--hover-col); 
 }
 
