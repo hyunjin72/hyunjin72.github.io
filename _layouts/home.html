@@ -3,7 +3,8 @@ layout: default
 ---
 
 <main class="container-md">
-  {% for section in site.sections | sort: 'order' %}
+  {% assign sorted_sections = site.sections | sort: 'order' %}
+  {% for section in sorted_sections %}
     <section id="{{ section.title | downcase | replace: ' ', '-' }}">
       {{ section.content }}
     </section>
