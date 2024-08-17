@@ -2,6 +2,10 @@
 layout: base
 ---
 
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
 <main class="container-md">
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
