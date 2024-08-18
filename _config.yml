@@ -54,9 +54,9 @@ navbar-links:
 social-network-links:
   email: "bella72@kaist.ac.kr"
   rss: false  # remove this line if you don't want to show an RSS link at the bottom
-  github: https://github.com/hyunjin72
-  linkedin: https://www.linkedin.com/in/hyunjin-seo-97525629a/?originalSubdomain=kr
-  google-scholar: https://scholar.google.com/citations?user=MFDOhRUAAAAJ&hl=en
+  # github: https://github.com/hyunjin72
+  # linkedin: https://www.linkedin.com/in/hyunjin-seo-97525629a/?originalSubdomain=kr
+  # google-scholar: https://scholar.google.com/citations?user=MFDOhRUAAAAJ&hl=en
   # twitter: daattali
   # patreon: DeanAttali
   # youtube: "@daattali"
