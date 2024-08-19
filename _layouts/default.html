@@ -19,13 +19,15 @@ scrolly_nav: _sections
       <style>
         .section-title {
           font-size: 2em; /* Default size for larger screens */
+          width: 30%;
         }
       
         @media (max-width: 600px) {
           .section-title {
             font-size: 1.5em; /* Adjust this value as needed for smaller screens */
             width: 60%; 
-            white-space: nowrap;
+            text-align: center;
+            align-items: center;
           }
         }
       </style>
@@ -41,7 +43,7 @@ scrolly_nav: _sections
       <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding: 100px 0;">
         <div class="container-md" style="text-align: left; max-width: 1200px; margin: 0 auto;">
           <div style="text-align: center;">
-            <h1 class="section-title" style="background-color: transparent; text-align: center; font-size: 2em; font-weight: normal; margin-bottom: 1em; padding-bottom: 0.25em; color: #262626; display: inline-block; border-bottom: 2.4px solid #d8d8d8; width: 30%; white-space: nowrap;">
+            <h1 class="section-title" style="background-color: transparent; text-align: center; font-size: 2em; font-weight: normal; margin-bottom: 1em; padding-bottom: 0.25em; color: #262626; display: inline-block; border-bottom: 2.4px solid #d8d8d8; white-space: nowrap;">
               {{ section.title | upcase }}
             </h1>
           </div>
