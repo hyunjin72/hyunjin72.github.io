@@ -17,6 +17,7 @@ scrolly_nav: _sections
       {% else %}
         <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
         <div style="text-align: left;">
+          {% assign mod_order = page.order | modulo: 3 %}
           {% if section.order % 3 == 0 %}
             <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; font-weight: normal;  margin-bottom: 1em; padding-bottom: 0.25em; border-bottom: 2px solid #c1ddec; color: #262626;">
               {{ section.title }}
