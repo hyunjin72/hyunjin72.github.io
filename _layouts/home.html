@@ -3,38 +3,36 @@ layout: default
 scrolly_nav: _sections
 ---
 
-<main class="container-md">
+<main>
   {% assign sorted_sections = site.sections | sort: 'order' %}
   {% for section in sorted_sections %}
       {% if section.title == "Hyunjin Seo" %}
         <!-- Different layout for 'About Me' section -->
-        <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px; background: linear-gradient(to bottom, #B2D2E9, white); margin: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw;">
-        <div style="text-align: left;">
-          <div>
+        <div style="width: 100%; background: linear-gradient(to bottom, #B2D2E9, white);">
+        <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
+          <div class="container-md" style="text-align: left; max-width: 1200px; margin: 0 auto;">
             {{ section.content }}
           </div>
         </div>
       {% else %}
         <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px;">
-        <div style="text-align: left;">
+          <div class="container-md" style="text-align: left; max-width: 1200px; margin: 0 auto;">
           {% assign mod_order = section.order | modulo: 3 %}
           {% if mod_order % 3 == 0 %}
-            <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; font-weight: normal;  margin-bottom: 1em; padding-bottom: 0.25em; border-bottom: 2px solid #c1ddec; color: #262626;">
-              {{ section.title }}
-            </h1>
+            <div style="text-align: left;">
           {% elsif mod_order % 3 == 1 %}
-            <h1 class="section-title" style="text-align: left; font-size: 2em; font-weight: normal; background-color: #e8f1f8; margin-bottom: 1em; padding-bottom: 0.25em; border-bottom: 2px solid #c1ddec; color: #262626;">
-              {{ section.title }}
-            </h1>
+            <div style="text-align: left; background-color: #e8f1f8;">
           {% else %}
-              <h1 class="section-title" style="text-align: left; font-size: 2em; font-weight: normal; background-color: #d4e6f3; margin-bottom: 1em; padding-bottom: 0.25em; border-bottom: 2px solid #c1ddec; color: #262626;">
-                {{ section.title }}
-              </h1>
+            <div style="text-align: left; background-color: #d4e6f3;">
           {% endif %}
+          <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 2em; font-weight: normal; margin-bottom: 1em; padding-bottom: 0.25em; border-bottom: 2px solid #c1ddec; color: #262626;">
+            {{ section.title }}
+          </h1>
           <div>
             {{ section.content }}
           </div>
         </div>
+      </div>
       {% endif %}
     </section>
   {% endfor %}
