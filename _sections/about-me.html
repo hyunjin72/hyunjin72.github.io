@@ -17,6 +17,7 @@ order: 2
       flex: 1;
       max-width: 35%; /* Adjust this value to resize the image */
       margin-top: 15px; /* Adjust this value to lower the image */
+      margin-right: 5px;
       display: flex;
       justify-content: flex-start; /* Align left on larger screens */
     }
@@ -24,7 +25,7 @@ order: 2
     .text-section {
       flex: 1;
       max-width: 65%;
-      padding-left: 40px;
+      padding-left: 20px; /* Reduce this value to decrease the space */
       font-size: 1em;
       margin-top: -10px;
       margin-bottom: 0px;
@@ -42,7 +43,8 @@ order: 2
 
     .profile-picture-container img {
       width: 130%; /* Zoom effect */
-      border-radius: 50%; /* Same as container for a smooth shape */
+      height: 100%; /* Ensure the image fills the container */
+      border-radius: 0%; /* Same as container for a smooth shape */
     }
 
     /* Responsive styles */
@@ -74,7 +76,7 @@ order: 2
       .profile-picture-container {
         width: 80%;
         height: auto;
-        border-radius: 50%; /* Less oval */
+        border-radius: 0%; /* Less oval */
       }
       .profile-picture-container img {
         width: 120%; /* Adjust zoom for responsiveness */

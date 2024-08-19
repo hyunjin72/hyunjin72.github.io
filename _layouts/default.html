@@ -8,7 +8,7 @@ scrolly_nav: _sections
   {% for section in sorted_sections %}
       {% if section.title == "Hyunjin Seo" %}
         <!-- Different layout for 'About Me' section -->
-        <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px; background: linear-gradient(to bottom, #8EB4D8, white); margin: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw;">
+        <section id="{{ section.title | downcase | replace: ' ', '-' }}" style="padding-top: 150px; background: linear-gradient(to bottom, #B2D2E9, white); margin: 0; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw;">
         <div style="text-align: left;">
           <div>
             {{ section.content }}
