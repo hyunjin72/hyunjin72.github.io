@@ -16,6 +16,17 @@ scrolly_nav: _sections
         </section>
       </div>
     {% else %}
+      <style>
+        .section-title {
+          font-size: 2em; /* Default size for larger screens */
+        }
+      
+        @media (max-width: 600px) {
+          .section-title {
+            font-size: 1.6em; /* Adjust this value as needed for smaller screens */
+          }
+        }
+      </style>
       {% assign mod_order = section.order | modulo: 3 %}
       {% if mod_order == 0 %}
         <div style="width: 100%;">
