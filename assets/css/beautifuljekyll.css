@@ -415,7 +415,7 @@ img {
 /* # 3.125rem; original for margin-top*/
 footer {
   padding: 1.875rem 0;
-  padding-top: 10px;
+  padding-top: 5px;
   border-top: 1px var(--footer-col) solid;
   margin-top: 0rem; 
   font-size: 0.875rem;
