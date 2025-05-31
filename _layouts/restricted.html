@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<script>
+function checkPassword() {
+    var password = document.getElementById('password').value;
+    if (password === '{{ page.password }}') {
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('password-form').style.display = 'none';
+        // Store in session storage so it persists during the session
+        sessionStorage.setItem('{{ page.url }}', 'true');
+    } else {
+        alert('Incorrect password');
+    }
+}
+
+// Check if already authenticated
+window.onload = function() {
+    if (sessionStorage.getItem('{{ page.url }}') === 'true') {
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('password-form').style.display = 'none';
+    }
+}
+</script>
+
+<div id="password-form" style="text-align: center; margin: 100px auto; max-width: 400px;">
+    <h2>Protected Content</h2>
+    <p>This post is password protected. Please enter the password to view the content.</p>
+    <input type="password" id="password" placeholder="Enter password" style="padding: 8px; margin: 10px 0; width: 200px;">
+    <br>
+    <button onclick="checkPassword()" style="padding: 8px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Submit
+    </button>
+</div>
+
+<div id="content" style="display: none;">
+    {{ content }}
+</div> 

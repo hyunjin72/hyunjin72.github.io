@@ -302,6 +302,15 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-scholar
+  - jekyll-toc
+
+scholar:
+  style: apa
+  locale: en
+  sort_by: year,month
+  bibliography_list_tag: div
+  bibliography_item_tag: div
 
 # collections: [sections]
 collections:

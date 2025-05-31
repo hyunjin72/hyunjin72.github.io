@@ -1,88 +1,144 @@
 ---
-layout: base
+layout: default
 ---
 
-{% include header.html type="post" %}
-
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
-
-      {% if page.gh-repo %}
-        {% assign gh_split =  page.gh-repo | split:'/'  %}
-        {% assign gh_user =  gh_split[0]  %}
-        {% assign gh_repo =  gh_split[1]  %}
-
-        <div id="header-gh-btns">
-          {% if page.gh-badge.size > 0 %}
-            {% for badge in page.gh-badge %}
-              {% case badge %}
-                {% when 'star'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'watch'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'fork'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                {% when 'follow'%}
-                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
-              {% endcase %}
-            {% endfor %}
-          {% endif %}
-        </div>
-      {% endif %}
-
-      {% if page.before-content %}
-        <div class="before-content">
-          {% for file in page.before-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      <div class="blog-post">
-        {{ content }}
+<article class="post">
+  <div class="container-md" style="max-width: 800px; margin: 0 auto; padding: 100px 20px;">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
       </div>
+    </header>
 
-      {% if page.tags.size > 0 %}
-        <div class="blog-tags">
-          <span>Tags:</span>
-          {% for tag in page.tags %}
-            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
+    {% if page.toc %}
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <nav>
+        {% for item in page.toc %}
+          <div class="toc-item">
+            <a href="#{{ item.name | downcase | replace: ' ', '-' }}">{{ item.name }}</a>
+            {% if item.subsections %}
+              <ul>
+                {% for subsection in item.subsections %}
+                  <li><a href="#{{ subsection.name | downcase | replace: ' ', '-' }}">{{ subsection.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </nav>
+    </div>
+    {% endif %}
 
-      {% if page.after-content %}
-        <div class="after-content">
-          {% for file in page.after-content %}
-            {% include {{ file }} %}
-          {% endfor %}
-        </div>
-      {% endif %}
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-      {% if page.social-share %}
-        {% include social-share.html %}
-      {% endif %}
+    {% if page.bibliography %}
+    <div class="bibliography">
+      <h2>References</h2>
+      {% bibliography --file {{ page.bibliography }} %}
+    </div>
+    {% endif %}
 
-      <ul class="pagination blog-pager">
-        {% if page.previous.url %}
-        <li class="page-item previous">
-          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">
-            <i class="fas fa-arrow-left" alt="Previous Post"></i>
-            <span class="d-none d-sm-inline-block">Previous Post</span>
-          </a>
-        </li>
-        {% endif %}
-        {% if page.next.url %}
-        <li class="page-item next">
-          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">
-            <span class="d-none d-sm-inline-block">Next Post</span>
-            <i class="fas fa-arrow-right" alt="Next Post"></i>
-          </a>
-        </li>
-        {% endif %}
-      </ul>
-      {% include comments.html %}
+    <div class="post-navigation">
+      <a href="/#blog" class="back-to-blog">← Back to Blog</a>
     </div>
   </div>
-</main>
+</article>
+
+<style>
+.post {
+  background-color: white;
+}
+
+.post-header {
+  margin-bottom: 2em;
+}
+
+.post-title {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #262626;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.toc {
+  margin: 2em 0;
+  padding: 1em;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.toc h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #262626;
+}
+
+.toc-item {
+  margin-bottom: 0.5em;
+}
+
+.toc-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.toc-item a:hover {
+  text-decoration: underline;
+}
+
+.toc-item ul {
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+}
+
+.toc-item li {
+  margin-bottom: 0.3em;
+}
+
+.bibliography {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid #eee;
+}
+
+.bibliography h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #262626;
+}
+
+.post-content {
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.post-content p {
+  margin-bottom: 1.5em;
+}
+
+.post-navigation {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid #eee;
+}
+
+.back-to-blog {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-to-blog:hover {
+  text-decoration: underline;
+}
+</style>
