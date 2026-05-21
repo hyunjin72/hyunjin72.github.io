@@ -3,135 +3,40 @@ title: Hyunjin Seo
 order: 2
 ---
 
-<head>
-  <style>
-    .content {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      flex-wrap: wrap;
-      text-align: left;
-    }
-
-    .image-section {
-      flex: 1 0 auto;
-      max-width: 30%; /* Adjust this value to resize the image */
-      margin-top: 50px; /* Adjust this value to lower the image */
-      margin-left: 30px;
-      margin-right: 10px; /* gap with text */
-      margin-bottom: 0px;
-      padding-left: 0px;
-      /* margin-right: -10px; */
-      display: flex;
-      justify-content: flex-start; /* Align left on larger screens */
-    }
-
-    .text-section {
-      flex: 1 0 auto;
-      max-width: 65%;
-      /* padding-left: 40px; Reduce this value to decrease the space */
-      font-size: 0.95em;
-      margin-top: -10px;
-      margin-bottom: 0px;
-      margin-right: 30px;
-      margin-left: 10px; /* gap with text */
-      padding-right: 0px;
-    }
-    
-    /* Container for the profile picture */
-    .profile-picture-container {
-      width: 300px;
-      height: 300px;
-      /* background-position: center;
-      background-repeat: no-repeat; */
-      border-radius: 50%; /* Oval shape */
-      overflow: hidden; /* Ensure the image doesn't overflow */
-    }
-
-    .profile-picture-container img {
-      width: 100%; /* Zoom effect */
-      height: 100%; /* Ensure the image fills the container */
-      border-radius: 50%; /* Same as container for a smooth shape */
-    }
-
-    @media (max-width: 600px) {
-
-      .top-border {
-        width: 50%;
-      }
-
-      .content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center; /* Center text on smaller screens */
-      }
-      
-      .image-section {
-        max-width: 100%;
-        justify-content: center; /* Center image on smaller screens */
-        padding: 0;
-        margin: 0 auto 20px auto;
-      }
-
-      .text-section {
-        max-width: 100%;
-        padding: 0;
-        text-align: left; 
-        font-size: 0.85em;
-      }
-
-      .profile-picture-container {
-        width: 80%;
-        height: auto;
-        border-radius: 0%; /* Less oval */
-        margin: 0 auto;
-      }
-      .profile-picture-container img {
-        width: 100%; /* Adjust zoom for responsiveness */
-      }
-    }
-  </style>
-</head>
-<body>
-<hr style="width: 23.8%; margin: auto; border: none; margin-bottom: 0em; margin-top: 0em;">
-
-<div class="content">
-    <div class="image-section">
-        <div class="profile-picture-container">
-            <img src="assets/img/my_image4.jpg" alt="Hyunjin Seo">
-        </div>
+<section class="r-hero" id="hyunjin-seo">
+  <div class="r-hero-inner r-reveal">
+    <div class="r-profile">
+      <img src="{{ '/assets/img/my_image4.jpg' | relative_url }}" alt="Hyunjin Seo">
     </div>
-    <div class="text-section">
-        <h1 class="section-title" style="background-color: transparent; text-align: left; font-size: 1.8em; font-weight: bold; margin-bottom: 0.5em; width: 80%; color: #262626;">
-            Hyunjin Seo
-        </h1>
-        <p style="font-size: 0.98em;">
-            Hi! I'm a Ph.D. student at KAIST, advised by <a href="https://sites.google.com/view/sungsooahn0215/home?authuser=0" target="_blank">Prof. Sungsoo Ahn</a>. 
-            <br>
-            I'm broadly interested in applying machine learning to proteins and drug-like molecules to accelerate experimental workflows in the wet lab.
-            <br><br>
-            Previously, I developed an energy-based graph transformer for predicting ground-state molecular conformations, and later built a masked diffusion model for molecular generation with element-wise diffusion trajectories. 
-            I also participated in a project leveraging representations from protein co-folding models for standalone small-molecule tasks, proposing a new perspective on what makes effective representations in drug discovery.
-            Currently, I'm working on building LLM systems for vibe protein design, where a single model reasons mechanistically over open-ended biological intents to cover the broad spectrum of protein design.
-        </p>
-        
-        <div class="sns-links" style="margin-top: 20px; font-size: 0.9em; color: #535353">
-          <a href="https://drive.google.com/file/d/19h6PUamJowF2khiy9YgxHp4vZ_CEIcQD/view?usp=sharing" style="margin-right: 15px;">
-              <i class="fas fa-file" style="font-size: 0.9em;"></i> CV
-          </a>
-            <a href="bella72@kaist.ac.kr" style="margin-right: 15px;">
-                <i class="fas fa-envelope" style="font-size: 0.9em;"></i> Email
-            </a>
-            <a href="https://scholar.google.com/citations?user=MFDOhRUAAAAJ&hl=en" target="_blank" style="margin-right: 15px;">
-                <i class="fas fa-graduation-cap" style="font-size: 0.9em;"></i> Google Scholar
-            </a>
-            <a href="https://www.linkedin.com/in/hyunjin-seo-97525629a/?originalSubdomain=kr" target="_blank" style="margin-right: 15px;">
-                <i class="fab fa-twitter" style="font-size: 0.9em;"></i> LinkedIn
-            </a>
-            <a href="https://github.com/hyunjin72" target="_blank" style="margin-right: 15px;">
-                <i class="fab fa-github" style="font-size: 0.9em;"></i> GitHub
-            </a>
-        </div>
+    <div>
+      <h1>Hyunjin Seo</h1>
+      <div class="r-role">
+        Ph.D. student · KAIST · advised by
+        <a href="https://sites.google.com/view/sungsooahn0215/home?authuser=0" target="_blank" rel="noopener">Prof. Sungsoo Ahn</a>
+      </div>
+      <p class="r-bio">
+        I'm broadly interested in applying machine learning to proteins and drug-like molecules to accelerate experimental workflows in the wet lab.
+        Previously, I developed an energy-based graph transformer for predicting ground-state molecular conformations, and later built a masked diffusion model for molecular generation with element-wise diffusion trajectories.
+        I also participated in a project leveraging representations from protein co-folding models for standalone small-molecule tasks, proposing a new perspective on what makes effective representations in drug discovery.
+        Currently, I'm working on building <b>LLM systems for vibe protein design</b>, where a single model reasons mechanistically over open-ended biological intents to cover the broad spectrum of protein design.
+      </p>
+      <div class="r-links">
+        <a href="https://drive.google.com/file/d/19h6PUamJowF2khiy9YgxHp4vZ_CEIcQD/view?usp=sharing" target="_blank" rel="noopener">
+          <i class="fas fa-file-alt"></i> CV
+        </a>
+        <a href="mailto:bella72@kaist.ac.kr">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="https://scholar.google.com/citations?user=MFDOhRUAAAAJ&hl=en" target="_blank" rel="noopener">
+          <i class="fas fa-graduation-cap"></i> Scholar
+        </a>
+        <a href="https://www.linkedin.com/in/hyunjin-seo-97525629a/?originalSubdomain=kr" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/hyunjin72" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
     </div>
-</div>
-</body>
+  </div>
+</section>
