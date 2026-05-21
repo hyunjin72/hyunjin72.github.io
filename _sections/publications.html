@@ -6,176 +6,261 @@ order: 4
 <section class="r-block r-reveal" id="publications">
   <h2 class="r-section-title"><span>Publications</span></h2>
 
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/vibeproteinbench.png' | relative_url }}" alt="VibeProteinBench framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">VibeProteinBench: An Evaluation Benchmark for Language-interfaced Vibe Protein Design</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo</span>, Hongjoon Ahn, Jimin Park, Sungjun Han, Gyubok Lee, Soojung Yang, Joseph S Brown, Leo Chen, Gina El Nesr, Feyisayo Eweje, Sarah Gurev, Hyejin Lee, Cheng-Hao Liu, Junlang Liu, Zhihui Qi, Gyu Rie Lee, Sungsoo Ahn, Jamin Shin, Sangwon Jung
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-preprint">Preprint</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2605.10978" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
+  <div class="r-tab-toggle" role="tablist">
+    <button type="button" class="r-tab r-tab-active" data-target="r-pub-selected">Selected</button>
+    <button type="button" class="r-tab" data-target="r-pub-full">Full</button>
   </div>
 
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/boltz.png' | relative_url }}" alt="Boltz framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Boltz is a Strong Baseline for Atom-level Representation Learning</h3>
-      <div class="r-pub-authors">
-        Hyosoon Jang, <span class="r-me">Hyunjin Seo</span>, Yunhui Jang, Seonghyun Park, Sungsoo Ahn
+  <!-- ============ SELECTED (5 papers, with thumbnails) ============ -->
+  <div id="r-pub-selected" class="r-pub-list r-pub-list-active">
+
+    <div class="r-pub">
+      <div class="r-pub-thumb">
+        <img src="{{ '/assets/img/pubs/selected/vibeproteinbench.png' | relative_url }}" alt="VibeProteinBench framework">
       </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-preprint">Preprint</span>
-        <a class="r-pub-link" href="https://www.arxiv.org/abs/2602.13249" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">VibeProteinBench: An Evaluation Benchmark for Language-interfaced Vibe Protein Design</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo</span>, Hongjoon Ahn, Jimin Park, Sungjun Han, Gyubok Lee, Soojung Yang, Joseph S Brown, Leo Chen, Gina El Nesr, Feyisayo Eweje, Sarah Gurev, Hyejin Lee, Cheng-Hao Liu, Junlang Liu, Zhihui Qi, Gyu Rie Lee, Sungsoo Ahn, Jamin Shin, Sangwon Jung
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Preprint</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2605.10978" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
       </div>
     </div>
+
+    <div class="r-pub">
+      <div class="r-pub-thumb">
+        <img src="{{ '/assets/img/pubs/selected/boltz.png' | relative_url }}" alt="Boltz framework">
+      </div>
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Boltz is a Strong Baseline for Atom-level Representation Learning</h3>
+        <div class="r-pub-authors">
+          Hyosoon Jang, <span class="r-me">Hyunjin Seo</span>, Yunhui Jang, Seonghyun Park, Sungsoo Ahn
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Preprint</span>
+          <a class="r-pub-link" href="https://www.arxiv.org/abs/2602.13249" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-thumb">
+        <img src="{{ '/assets/img/pubs/selected/meld.png' | relative_url }}" alt="MELD framework">
+      </div>
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Learning Flexible Forward Trajectories for Masked Molecular Diffusion</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Taewon Kim*, Sihyun Yu, Sungsoo Ahn <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2026</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2505.16790" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://holymollyhao.github.io/MELD/" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-thumb">
+        <img src="{{ '/assets/img/pubs/selected/rebind.png' | relative_url }}" alt="ReBind framework">
+      </div>
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">ReBind: Enhancing Ground-state Molecular Conformation Prediction via Force-Based Graph Rewiring</h3>
+        <div class="r-pub-authors">
+          Taewon Kim*, <span class="r-me">Hyunjin Seo*</span>, Sungsoo Ahn, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2025</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2410.14696" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://github.com/holymollyhao/ReBIND" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-thumb">
+        <img src="{{ '/assets/img/pubs/selected/teddy.png' | relative_url }}" alt="TEDDY framework">
+      </div>
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">TEDDY: Trimming Edges with Degree-based Discrimination strategY</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Jihun Yun*, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2024</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2402.01261" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://github.com/hyunjin72/TEDDY" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/meld.png' | relative_url }}" alt="MELD framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Learning Flexible Forward Trajectories for Masked Molecular Diffusion</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo*</span>, Taewon Kim*, Sihyun Yu, Sungsoo Ahn <span class="r-eq">(*: equal contribution)</span>
+  <!-- ============ FULL (all papers, no thumbnails) ============ -->
+  <div id="r-pub-full" class="r-pub-list">
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">VibeProteinBench: An Evaluation Benchmark for Language-interfaced Vibe Protein Design</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo</span>, Hongjoon Ahn, Jimin Park, Sungjun Han, Gyubok Lee, Soojung Yang, Joseph S Brown, Leo Chen, Gina El Nesr, Feyisayo Eweje, Sarah Gurev, Hyejin Lee, Cheng-Hao Liu, Junlang Liu, Zhihui Qi, Gyu Rie Lee, Sungsoo Ahn, Jamin Shin, Sangwon Jung
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Preprint</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2605.10978" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
       </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-iclr">ICLR 2026</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2505.16790" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-        <a class="r-pub-link" href="https://holymollyhao.github.io/MELD/" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> Project</a>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Boltz is a Strong Baseline for Atom-level Representation Learning</h3>
+        <div class="r-pub-authors">
+          Hyosoon Jang, <span class="r-me">Hyunjin Seo</span>, Yunhui Jang, Seonghyun Park, Sungsoo Ahn
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Preprint</span>
+          <a class="r-pub-link" href="https://www.arxiv.org/abs/2602.13249" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
       </div>
     </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Learning Flexible Forward Trajectories for Masked Molecular Diffusion</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Taewon Kim*, Sihyun Yu, Sungsoo Ahn <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2026</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2505.16790" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://holymollyhao.github.io/MELD/" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">ReBind: Enhancing Ground-state Molecular Conformation Prediction via Force-Based Graph Rewiring</h3>
+        <div class="r-pub-authors">
+          Taewon Kim*, <span class="r-me">Hyunjin Seo*</span>, Sungsoo Ahn, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2025</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2410.14696" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://github.com/holymollyhao/ReBIND" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Towards Precise Prediction Uncertainty in GNNs: Refining GNNs with Topology-grouping Strategy</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo</span>, Kyusung Seo*, Joonhyung Park*, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-aaai">AAAI 2025</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2412.14223" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Unleashing the Potential of Text-attributed Graphs: Automatic Relation Decomposition via Large Language Models</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Taewon Kim*, June Yong Yang, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Preprint</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2405.18581" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">TEDDY: Trimming Edges with Degree-based Discrimination strategY</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Jihun Yun*, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iclr">ICLR 2024</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2402.01261" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+          <a class="r-pub-link" href="https://github.com/hyunjin72/TEDDY" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">PC-Adapter: Topology-Aware Adapter for Efficient Domain Adaption on Point Clouds with Rectified Pseudo Label</h3>
+        <div class="r-pub-authors">
+          Joonhyung Park, <span class="r-me">Hyunjin Seo</span>, Eunho Yang
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-iccv">ICCV 2023</span>
+          <a class="r-pub-link" href="https://arxiv.org/abs/2309.16936" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Efficient Subword Segmentation for Korean Language Classification</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Jeongjae Nam*, Minseok Kim* <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-hclt">HCLT 2022</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Analysis and Utilization of Hypergraph Neural Networks</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo</span>, Seongjun Yun, Jaewoo Kang
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-kcc">KCC 2021</span>
+          <span class="r-pub-award">🏆 Best Undergraduate Award</span>
+          <a class="r-pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583450" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="r-pub">
+      <div class="r-pub-body">
+        <h3 class="r-pub-title">Relation-aware Pseudo-labeling for Link Prediction with Graph Neural Networks</h3>
+        <div class="r-pub-authors">
+          <span class="r-me">Hyunjin Seo*</span>, Seongjun Yun*, Buru Chang, Jaewoo Kang <span class="r-eq">(*: equal contribution)</span>
+        </div>
+        <div class="r-pub-meta">
+          <span class="r-venue r-venue-preprint">Under Review</span>
+          <a class="r-pub-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666771" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/rebind.png' | relative_url }}" alt="ReBind framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">ReBind: Enhancing Ground-state Molecular Conformation Prediction via Force-Based Graph Rewiring</h3>
-      <div class="r-pub-authors">
-        Taewon Kim*, <span class="r-me">Hyunjin Seo*</span>, Sungsoo Ahn, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-iclr">ICLR 2025</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2410.14696" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-        <a class="r-pub-link" href="https://github.com/holymollyhao/ReBIND" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/topogroup.png' | relative_url }}" alt="Topology-grouping GNN framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Towards Precise Prediction Uncertainty in GNNs: Refining GNNs with Topology-grouping Strategy</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo</span>, Kyusung Seo*, Joonhyung Park*, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-aaai">AAAI 2025</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2412.14223" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/rose.png' | relative_url }}" alt="RoSE framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Unleashing the Potential of Text-attributed Graphs: Automatic Relation Decomposition via Large Language Models</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo*</span>, Taewon Kim*, June Yong Yang, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-preprint">Preprint</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2405.18581" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/teddy.png' | relative_url }}" alt="TEDDY framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">TEDDY: Trimming Edges with Degree-based Discrimination strategY</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo*</span>, Jihun Yun*, Eunho Yang <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-iclr">ICLR 2024</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2402.01261" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-        <a class="r-pub-link" href="https://github.com/hyunjin72/TEDDY" target="_blank" rel="noopener"><i class="fas fa-code"></i> Code</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb">
-      <img src="{{ '/assets/img/pubs/pcadapter.png' | relative_url }}" alt="PC-Adapter framework">
-    </div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">PC-Adapter: Topology-Aware Adapter for Efficient Domain Adaption on Point Clouds with Rectified Pseudo Label</h3>
-      <div class="r-pub-authors">
-        Joonhyung Park, <span class="r-me">Hyunjin Seo</span>, Eunho Yang
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-iccv">ICCV 2023</span>
-        <a class="r-pub-link" href="https://arxiv.org/abs/2309.16936" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb r-alt5">KSS</div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Efficient Subword Segmentation for Korean Language Classification</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo*</span>, Jeongjae Nam*, Minseok Kim* <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-hclt">HCLT 2022</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb r-alt4">HGN</div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Analysis and Utilization of Hypergraph Neural Networks</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo</span>, Seongjun Yun, Jaewoo Kang
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-kcc">KCC 2021</span>
-        <span class="r-pub-award">🏆 Best Undergraduate Award</span>
-        <a class="r-pub-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10583450" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="r-pub">
-    <div class="r-pub-thumb r-alt2">RaP</div>
-    <div class="r-pub-body">
-      <h3 class="r-pub-title">Relation-aware Pseudo-labeling for Link Prediction with Graph Neural Networks</h3>
-      <div class="r-pub-authors">
-        <span class="r-me">Hyunjin Seo*</span>, Seongjun Yun*, Buru Chang, Jaewoo Kang <span class="r-eq">(*: equal contribution)</span>
-      </div>
-      <div class="r-pub-meta">
-        <span class="r-venue r-venue-preprint">Under Review</span>
-        <a class="r-pub-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4666771" target="_blank" rel="noopener"><i class="fas fa-file-alt"></i> PDF</a>
-      </div>
-    </div>
-  </div>
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('#publications .r-tab');
+      var lists = document.querySelectorAll('#publications .r-pub-list');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var target = tab.dataset.target;
+          tabs.forEach(function (t) { t.classList.toggle('r-tab-active', t === tab); });
+          lists.forEach(function (l) { l.classList.toggle('r-pub-list-active', l.id === target); });
+        });
+      });
+    })();
+  </script>
 </section>

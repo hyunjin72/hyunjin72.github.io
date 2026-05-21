@@ -45,9 +45,9 @@ main a:hover {
   box-shadow: none !important;
 }
 .navbar-custom .navbar-brand {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
   color: var(--r-text) !important;
 }
 .navbar-custom .nav-link {
@@ -118,12 +118,12 @@ main {
   object-fit: cover;
 }
 .r-hero h1 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 600;
-  font-size: 2.4em;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
   line-height: 1.1;
-  margin: 0 0 8px;
-  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  letter-spacing: -0.025em;
   color: var(--r-text);
 }
 .r-hero .r-role {
@@ -242,6 +242,38 @@ main {
   display: flex;
 }
 
+/* ---------- Pub tab toggle ---------- */
+.r-tab-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 32px;
+}
+.r-tab {
+  background: none;
+  border: 1px solid var(--r-border);
+  color: var(--r-text-soft);
+  padding: 6px 18px;
+  font-size: 0.85em;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  letter-spacing: 0.01em;
+}
+.r-tab:hover {
+  color: var(--r-accent);
+  border-color: var(--r-accent);
+}
+.r-tab.r-tab-active {
+  background: var(--r-accent);
+  color: white !important;
+  border-color: var(--r-accent);
+}
+.r-pub-list { display: none; }
+.r-pub-list.r-pub-list-active { display: block; }
+
 /* ---------- Publications ---------- */
 .r-pub {
   display: flex;
@@ -277,7 +309,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
   color: var(--r-accent);
   font-size: 0.9em;
@@ -301,11 +333,12 @@ main {
   min-width: 0;
 }
 .r-pub-title {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
   font-size: 1.02em;
   margin: 0 0 4px;
   line-height: 1.35;
+  letter-spacing: -0.005em;
   color: var(--r-text);
 }
 .r-pub-authors {
@@ -388,7 +421,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
   color: var(--r-accent);
   font-size: 0.95em;
@@ -404,10 +437,11 @@ main {
   min-width: 0;
 }
 .r-org-title {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
   font-size: 1em;
   margin: 0 0 2px;
+  letter-spacing: -0.005em;
   color: var(--r-text);
 }
 .r-org-date {
@@ -438,10 +472,11 @@ main {
   border-bottom: none;
 }
 .r-item-title {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
   font-size: 0.98em;
   margin: 0 0 4px;
+  letter-spacing: -0.005em;
   color: var(--r-text);
 }
 .r-item-meta {
